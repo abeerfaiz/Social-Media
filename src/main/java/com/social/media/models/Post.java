@@ -3,7 +3,7 @@ package com.social.media.models;
 import jakarta.persistence.*;
 
 @Entity
-public class SocialPost {
+public class Post {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

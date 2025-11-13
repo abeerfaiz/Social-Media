@@ -1,8 +1,14 @@
 package com.social.media.models;
 
 import jakarta.persistence.*;
+import lombok.*;
+
+import java.util.Objects;
 
 @Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Post {
 
     @Id
@@ -12,4 +18,9 @@ public class Post {
     @ManyToOne
     @JoinColumn(name = "user_id")
     private SocialUser socialUser;
+
+    @Override
+    public int hashCode(){
+        return Objects.hash(id);
+    }
 }
